@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -96,6 +97,32 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
   }
+  
+  /* Typography for Petfolk */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif text-petfolk-brown;
+  }
+}
+
+/* Sitemap specific styles */
+.sitemap-link {
+  @apply text-petfolk-brown hover:text-petfolk-orange transition-colors duration-200;
+}
+
+.sitemap-section h2 {
+  @apply text-2xl font-medium mb-4;
+}
+
+.sitemap-section h3 {
+  @apply text-xl font-medium mb-2;
+}
+
+.sitemap-list {
+  @apply mb-8;
+}
+
+.sitemap-list a {
+  @apply block py-1 sitemap-link;
 }
